@@ -2,6 +2,8 @@
 # it's going to pull it either from the docer hub repository if we haven't already downloaded or our own computer if we already downloaded
 #alpine is the distribution of linux
 FROM node:17-alpine
+# install nodemon and make it run globally within the image or container
+RUN npm install -g nodemon
 # set up work directory,
 # tells docker that when run commands on the below working directory, so later on when we run npm install within the image
 # it will run inside the /app folder
@@ -21,4 +23,4 @@ COPY . .
 EXPOSE 4000
 #CMD allows us to specifiy any commands that should be run at runtime when the container begins to run
 #We can't just directly RUN node app.js because we don't want to run on the image.
-CMD ["node", "app.js"]
+CMD ["npm","run","dev"]  

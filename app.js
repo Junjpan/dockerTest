@@ -9,11 +9,11 @@ app.get("/", (req, res) => {
   res.json([
     {
       id: "001",
-      title: "Book Review: The Bear & The Nightingale",
+      title: "Book Review: The Bear & The Nightingale...",
     },
     {
       id: "002",
-      title: "Game Review: Pokemon Brillian Diamond",
+      title: "Game Review: Pokemon Brillian Diamond...",
     },
     {
       id: "003",
